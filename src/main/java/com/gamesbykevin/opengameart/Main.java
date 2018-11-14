@@ -39,9 +39,9 @@ public class Main {
         displayMessage("Loading property file");
 
 		Properties prop = new Properties();
-		String propFileName = "./config.properties";
+		String propFileName = "config.properties";
 
-		InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+		InputStream inputStream = Main.class.getClassLoader().getResourceAsStream(propFileName);
 
 		if (inputStream != null) {
 			prop.load(inputStream);
